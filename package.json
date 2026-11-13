@@ -1,0 +1,18 @@
+{
+  "name": "langgraph-e2e-mcp-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "uv run --frozen python -m unittest discover -s tests -v",
+    "fixture": "node app.mjs"
+  },
+  "dependencies": {
+    "e2e": "0.23.1",
+    "@e2e-dev/web": "0.16.0"
+  }
+}

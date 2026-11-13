@@ -1,0 +1,8 @@
+[project]
+name = "langgraph-e2e-mcp-example"
+version = "0.1.0"
+requires-python = ">=3.12,<3.15"
+dependencies = ["langgraph==1.2.21", "mcp==2.3.0", "psutil==7.2.2"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "BLE"]
