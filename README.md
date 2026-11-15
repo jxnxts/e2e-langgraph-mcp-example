@@ -16,8 +16,7 @@ intentional negative test that proves an omitted ID returns `SESSION_REQUIRED`.
 
 Requirements: Node.js 24+, npm, [uv](https://docs.astral.sh/uv/), and a machine
 where Playwright Chromium runs. Python 3.12 is selected by `.python-version`;
-uv can install it. Copy this directory to an independent repository or work
-in it directly. It imports no monorepo modules and uses published, built npm
+uv can install it. It imports no monorepo modules and uses published, built npm
 packages with pinned versions and integrity-checked locks.
 
 ```sh
@@ -110,7 +109,7 @@ text, session ID, observed PID/listener, cancellation, and cleanup result.
 under `artifacts/tests/`; set `EXAMPLE_TEST_OUTPUT` to change that path.
 Generated artifacts, environments and dependencies are ignored by Git.
 
-## Limits and publication
+## Limits
 
 This proves local orchestration, browser isolation and cleanup for these
 three scenarios. It does not prove a remote service persists or cleans up
@@ -119,12 +118,6 @@ isolation, or an LLM's behavior. The TCP check is a final point-in-time
 check of observed owned listeners, not an audit of the host. The demo
 cancels the graph task during a tool call, not during session acquisition.
 There are two logical session clients and one protocol connection.
-
-`registry-entry.draft.json` is a publication draft, deliberately absent from
-the live e2e registry. Replace its repository placeholder with a real public
-GitHub/GitLab URL pinned to a full reviewed commit SHA before submitting it.
-Do not treat the draft as an accepted upstream contribution. The folder has
-its own Apache-2.0 license and can be extracted without the e2e monorepo.
 
 Last checked: 2026-11-13, macOS, Node 24.22.2, Python 3.12,
 e2e 0.23.1, @e2e-dev/web 0.16.0, LangGraph 1.2.21, MCP Python SDK 2.3.0.
